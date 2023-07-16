@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title> <!-- Título que aparece na barra do navegador -->
+    <link rel="shortcut icon" href="C:\Users\sousa\OneDrive\Imagens\Saved Pictures\flor.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> <!-- Link de integração com o CSS | buscar a refência/página de CSS -->
+</head>
+
+<body>
+    <form class="form"> <!-- Formulário de login: usuário, senha, entrar -->
+        <h2 class="form-title">insira o seu login</h2>
+        <!-- O 'h2' é o tamanho da texto -->
+        <input class="form-login" type="text" placeholder="Login" id="login">
+        <!-- 'input' é um botão | tipo texto | placeholder sendo o Login (o usuário vê) | identificador sendo o login -->
+        <input class="form-password" type="password" placeholder="Senha" id="senha">
+        <!-- A mesma lógica acima se aplica aqui para a senha -->
+        <input class="form-entrar" type="submit" value="Entrar" onclick="logar(); return false">
+        <!-- Submeter as informações e salvar | valor entrar | onclick chama uma função para validar se tem sucesso ou não, se sim, abre outra página | abrir essa função e retornar falso encerrando (bom para performance) -->
+    </form>
+</body>
+
+<script> /* Validar senha definindo a função */
+    function logar() {
+        var login = document.getElementById('login').value; /* Cria-se uma variável login | Ela recebe tudo que tiver dentro do documento e busca o elemento (informação) dentro do id login e quero o valor digitado pelo usuário */
+        var senha = document.getElementById('senha').value; /* Mesma lógica acima */
+
+        if (login == "admin" && senha == "admin") {
+            alert('Sucesso'); /* Se o login for igual ao admin e a senha for igual admin, retorna um alerta de sucesso. */
+        }
+
+        else {
+            alert('Acesso negado'); /* Caso não atender as condições, emitir um alerta de acesso negado. */
+        }
+    }
+</script>
+
+</html>

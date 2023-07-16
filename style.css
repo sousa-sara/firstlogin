@@ -1,0 +1,79 @@
+style {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: -webkit-linear-gradient(left, #f4a460, #ffdead);
+    background: -moz-linear-gradient(left, #f4a460, #ffdead);
+    background: -ms-linear-gradient(left, #f4a460, #ffdead);
+    background: -o-linear-gradient(left, #f4a460, #ffdead);
+    background: linear-gradient(to right, #f4a460, #ffdead);
+    color: #FF7F50;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: garamond, monospace;
+    overflow: hidden;
+}
+
+form {
+    width: 250px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.541);
+    border-radius: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: garamond, monospace;
+}
+
+.form-entrar {
+    width: 80px;
+    background-color: #3CB371;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #b7d5ac;
+}
+
+/*Responsividade */
+@media screen and (max-width: 600px) {
+    form {
+        margin: 8px;
+        padding: 15px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    input {
+        height: 25px;
+
+    }
+}
